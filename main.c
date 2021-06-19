@@ -131,6 +131,11 @@ void addAnyWhereAfter(int data, int afterThisData)
     //if temp->next is NULL it means beforeThisData variable don't exists in our list...
     if(temp->next == NULL )
     {
+        if(temp->next->data == afterThisData)
+        {
+            addLast(data);
+            return;
+        }
         printf("\nWe couldn't find %d node", afterThisData);
         return;
     }
